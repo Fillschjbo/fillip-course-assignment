@@ -45,7 +45,7 @@ body{
     margin-top: 255px;
     justify-content: center;
     left: 0;
-    width: 100vw;
+    width: 100vh;
 }
 
 .navMenu .menu {
@@ -240,7 +240,7 @@ body{
 
     .navMenu {
         width: 350px;
-        height: 100vh;
+        height: 205vh;
         top:0;
         margin-top: 68px;
     }
@@ -284,12 +284,14 @@ body{
         flex-direction: column;
         align-items: center;
         width: 100vw;
+        overflow: clip;
     }
 
     .heroBannerImage {
         object-fit: cover;
         height: 476px;
         width: 13000px;
+        margin: 0;
     }
 
     .heroBannerText {
@@ -299,6 +301,11 @@ body{
 
     .heroBannerButton {
         top: 55%;
+    }
+
+    .carousel{
+        margin: 0;
+        margin-top: 1rem;
     }
 
     .carousel h2 {
