@@ -1,0 +1,350 @@
+:root {
+    --primary: #fcfc62;
+    --secondary: #1d1e18;
+    --tertiary: #f8f8f8;
+}
+
+* {
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+}
+
+body{
+    background: var(--tertiary);
+}
+
+/*this is start of header*/
+.header {
+    display: flex;
+    position: sticky;
+    background-color: var(--primary);
+    align-items: center;
+    padding: 1rem;
+    height: 68px;
+    gap: 1rem;
+    top: 0;
+    z-index: 20;
+}
+
+.headerButtons {
+    display: flex;
+    gap: 1rem;
+    font-size: 1.3rem;
+}
+
+.nav {
+    display: none;
+}
+
+.navMenu {
+    display: none;
+    position: absolute;
+    background-color: var(--primary);
+    margin-top: 255px;
+    justify-content: center;
+    left: 0;
+    width: 100vw;
+}
+
+.navMenu .menu {
+    padding-bottom: .5rem;
+    font-size: 31px;
+    font-weight: bold;
+}
+
+.navMenu ul {
+    gap: .5rem;
+    padding: 0;
+}
+
+.navMenu li{
+    list-style-type: none;
+    padding-left: 1rem;
+    border-bottom: solid 1px var(--secondary);
+    font-size: 25px;
+}
+
+.navMenu a {
+    color: var(--secondary);
+    text-decoration: none;
+}
+
+.desktop {
+    display: none;
+}
+
+#menuCheckbox:checked ~ .navMenu{
+    display: block;
+}
+
+#menuCheckbox {
+    display: none;
+}
+
+.logo {
+    flex-grow: 2;
+}
+
+.logo img {
+    height: 60px;
+    width: 108px;
+}
+
+.search {
+    background-color: #EEEEEE;
+    border: none;
+    width: 100vw;
+    padding: 8px;
+}
+
+/*this is main*/
+
+.breadCrumb {
+    display: flex;
+    font-size: .5rem;
+    gap: 1rem;
+    margin: .5rem 1rem;
+}
+
+.BreadCrumbLight {
+    font-weight: normal;
+    color: rgba(29, 30, 24, 0.72);
+}
+
+.heading{
+    margin: 1rem;
+}
+
+.contentContainer {
+    background-color: #EEEEEE;
+    display: flex;
+    margin: 1rem;
+}
+
+.productContainer {
+    display: flex;
+    flex-direction: row;
+    width: 100vw;
+}
+
+.productContainer img {
+    height: 162px;
+    width: 162px;
+    padding: .5rem;
+}
+
+.productTextContainer {
+    display: flex;
+    flex-direction: column;
+    margin-top: .5rem;
+    flex-grow: 2;
+}
+
+.productTextContainer h2 {
+    font-size: 1rem;
+}
+
+.productTextContainer ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: .7rem;
+}
+
+.productTextContainer ul li {
+     font-size: 12px;
+    font-family: 'DM Sans', sans-serif;
+}
+
+.x {
+    padding: .5rem;
+}
+
+.summaryContainer {
+    font-family: "DM Sans", sans-serif;
+    background-color: #EEEEEE;
+    margin: 1rem;
+}
+
+.summaryList {
+    border-bottom: solid 1px var(--secondary);
+    margin: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding-top: 1rem;
+}
+
+.list{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0;
+    list-style: none;
+}
+
+.totalList {
+    margin: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.addRemove {
+    padding: 1rem;
+    font-size: 12px;
+}
+
+
+.paymentMethods {
+    margin: 1rem;
+}
+
+.paymentMethods ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0;
+    list-style: none;
+}
+
+.paymentMethods ul li {
+    font-size: 3.5rem;
+}
+
+.placeOrderButton {
+    display: flex;
+    margin-top: 3rem;
+    justify-content: center;
+}
+
+.placeOrderButton button {
+    width: 95vw;
+    background-color: #1d1e18;
+    color: #fcfc62;
+    font-family: Poppins, sans-serif;
+    font-size: 1.2rem;
+    font-weight: 600;
+    padding: .5rem 0 .5rem 0;
+    border-radius: 35px;
+    border: none;
+}
+
+.delivery ul {
+    list-style: none;
+    padding: 0;
+    margin: 3rem;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+/*footer*/
+
+.footerContainer {
+    display: flex;
+    background-color: var(--primary);
+    overflow: hidden;
+    justify-content: space-between;
+    padding: 1rem;
+    margin-top: 1rem;
+}
+
+.footerContainer ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footerContainer ul li {
+    font-size: .5rem;
+}
+
+.footerContainer ul li:first-child  {
+    font-weight: bold;
+}
+
+@media (min-width: 1024px) {
+    .header {
+        display: flex;
+        position: relative;
+        justify-content: space-between;
+    }
+
+    .logo {
+        flex-grow: 0;
+    }
+
+    .navMenu {
+        width: 350px;
+        height: 100vh;
+        top: 0;
+        margin-top: 68px;
+    }
+
+    .menuButtonContainer {
+        display: flex;
+        align-items: center;
+        gap: 2rem;
+    }
+
+    .desktop {
+        display: block;
+    }
+
+    .navMenu .menu {
+        margin-top: 0;
+    }
+
+    .nav {
+        display: flex;
+        position: relative;
+    }
+
+    .nav ul {
+        display: flex;
+        justify-content: center;
+        gap: 75px;
+        width: 100vw;
+        background-color: #1d1e18;
+        list-style: none;
+        padding: 0;
+    }
+
+    .nav ul li a {
+        color: var(--tertiary);
+        text-decoration: none;
+    }
+
+    .checkoutPage {
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        overflow: clip;
+    }
+
+    .myCart {
+        display: flex;
+        flex-direction: column;
+        width: 750px;
+    }
+
+    .rightSideCheckout {
+        width: 750px;
+    }
+
+    .paymentContainer {
+        display: flex;
+        justify-content: center;
+    }
+
+    .paymentMethods {
+        width: 750px;
+    }
+
+    .heading {
+        margin-bottom: 0;
+    }
+}

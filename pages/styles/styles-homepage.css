@@ -1,0 +1,328 @@
+:root {
+    --primary: #fcfc62;
+    --secondary: #1d1e18;
+    --tertiary: #f8f8f8;
+}
+
+* {
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+}
+
+body{
+    background: var(--tertiary);
+}
+
+/*this is start of header*/
+
+.header {
+    display: flex;
+    position: sticky;
+    background-color: var(--primary);
+    align-items: center;
+    padding: 1rem;
+    height: 68px;
+    gap: 1rem;
+    top: 0;
+    z-index: 20;
+}
+
+.headerButtons {
+    display: flex;
+    gap: 1rem;
+    font-size: 1.3rem;
+}
+
+.nav {
+    display: none;
+}
+
+.navMenu {
+    display: none;
+    position: absolute;
+    background-color: var(--primary);
+    margin-top: 255px;
+    justify-content: center;
+    left: 0;
+    width: 100vw;
+}
+
+.navMenu .menu {
+    padding-bottom: .5rem;
+    font-size: 31px;
+    font-weight: bold;
+}
+
+.navMenu ul {
+    gap: .5rem;
+    padding: 0;
+}
+
+.navMenu li{
+    list-style-type: none;
+    padding-left: 1rem;
+    border-bottom: solid 1px var(--secondary);
+    font-size: 25px;
+}
+
+.navMenu a {
+    color: var(--secondary);
+    text-decoration: none;
+}
+
+.desktop {
+    display: none;
+}
+
+#menuCheckbox:checked ~ .navMenu{
+    display: block;
+}
+
+#menuCheckbox {
+    display: none;
+}
+
+.logo {
+    flex-grow: 2;
+}
+
+.logo img {
+    height: 60px;
+    width: 108px;
+}
+
+.search {
+    background-color: #EEEEEE;
+    border: none;
+    width: 100vw;
+    padding: 8px;
+}
+
+/*this is main*/
+
+
+
+.heroBanner {
+    display: flex;
+    justify-content: center;
+    padding-top: 20px;
+    max-width: 1300px;
+}
+
+.heroBannerImage {
+    object-fit: cover;
+    height: 308px;
+    width: 360px;
+    filter: brightness(85%);
+    flex-grow: 1;
+    margin: 0 2rem;
+}
+
+.heroBannerText {
+    position: absolute;
+    z-index: 10;
+    top: 25%
+}
+
+.heroBannerButton {
+    position: absolute;
+    top: 43%;
+    background: var(--primary);
+    color: var(--secondary);
+    border-radius: 35px;
+    width: 164px;
+    height: 33px;
+    font-size: 12px;
+    font-weight: 600;
+    border: none;
+}
+
+.heroBannerButton:focus {
+    background-color: var(--secondary);
+    color: var(--primary);
+    cursor: pointer;
+}
+
+.navigationLinks ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    gap: 1rem;
+    margin-top: 1.5rem;
+    padding-left: 0;
+}
+
+.navigationLinks a {
+    color: var(--secondary);
+    font-weight: bold;
+}
+
+.carousel{
+    margin-top: 1.5rem;
+    margin-left: 1rem;
+}
+
+.carousel h2 {
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+.carouselContent {
+    display: flex;
+    gap: 16px;
+    margin-top: 1rem;
+    overflow-x: scroll;
+}
+
+.contentCard {
+    display: flex;
+    flex-direction: column;
+    flex-shrink: 0;
+    height: 222px;
+    width: 154px;
+    background-color: #EEEEEE;
+}
+
+.contentCardImage {
+    height: 162px;
+    width: 100%;
+    padding: 8px;
+}
+
+.contentCard h3 {
+    font-size: 12px;
+}
+
+.contentCard p {
+    font-size: 8px;
+}
+
+.contentCardText {
+    padding-left: 4px;
+}
+
+/*this is the footer*/
+
+.footerContainer {
+    display: flex;
+    background-color: var(--primary);
+    overflow: hidden;
+    justify-content: space-between;
+    padding: 1rem;
+    margin-top: 1rem;
+}
+
+.footerContainer ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footerContainer ul li {
+    font-size: .5rem;
+}
+
+.footerContainer ul li:first-child  {
+    font-weight: bold;
+}
+
+
+@media (min-width: 1024px) {
+    .header {
+        display: flex;
+        position: relative;
+        justify-content: space-between;
+    }
+
+    .logo {
+        flex-grow: 0;
+    }
+
+    .navMenu {
+        width: 350px;
+        height: 100vh;
+        top:0;
+        margin-top: 68px;
+    }
+
+    .menuButtonContainer {
+        display: flex;
+        align-items: center;
+        gap: 2rem;
+    }
+
+    .desktop {
+        display: block;
+    }
+
+    .navMenu .menu {
+        margin-top: 0;
+    }
+
+    .nav {
+        display: flex;
+        position: relative;
+    }
+
+    .nav ul {
+        display: flex;
+        justify-content: center;
+        gap: 75px;
+        width: 100vw;
+        background-color: #1d1e18;
+        list-style: none;
+        padding: 0;
+    }
+
+    .nav ul li a{
+        color: var(--tertiary);
+        text-decoration: none;
+    }
+
+    main {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100vw;
+    }
+
+    .heroBannerImage {
+        object-fit: cover;
+        height: 476px;
+        width: 13000px;
+    }
+
+    .heroBannerText {
+        font-size: 128px;
+        color: var(--tertiary)
+    }
+
+    .heroBannerButton {
+        top: 55%;
+    }
+
+    .carousel h2 {
+        font-size: 1.5rem;
+        font-weight: 600;
+    }
+
+    .contentCard {
+        height: 448px;
+        width: 310px;
+    }
+
+    .contentCardImage {
+        height: 328px;
+        width: 100%;
+        padding: 8px;
+    }
+
+    .contentCard h3 {
+        font-size: 25px;
+    }
+
+    .contentCard p {
+        font-size: 16px;
+    }
+
+}

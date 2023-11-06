@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home | Rainydays</title>
+  <link rel="stylesheet" type="text/css" href="styles/thank-you-styles.css">
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/6a960ad6ac.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+  <header class="header">
+    <input type="checkbox" id="menuCheckbox"/>
+    <label for="menuCheckbox">
+      <div class=menuButtonContainer>
+        <i class="fa-solid fa-bars"></i>
+        <h4 class="desktop">Menu</h4>
+      </div>
+    </label>
+    <div class="logo">
+      <img src="/assets/images/rainydays.svg" alt="Rainydays">
+    </div>
+
+    <nav class="navMenu">
+      <ul>
+        <li><a class="menu">Menu</a></li>
+        <li><a href=../pages/index.html>Home</a></li>
+        <li><a href="../pages/Shop-page.html">Shop</a></li>
+        <li><a href="../pages/about-us-page.html">About</a></li>
+        <li><a href="../pages/contact-page.html">Contact</a></li>
+      </ul>
+    </nav>
+
+    <div class="headerButtons">
+      <i class="fa-regular fa-heart"></i>
+      <i class="fa-solid fa-cart-shopping"></i>
+    </div>
+  </header>
+
+  <nav class="nav">
+    <ul>
+      <li><a href=../pages/index.html>Home</a></li>
+      <li><a href="../pages/Shop-page.html">Shop</a></li>
+      <li><a href="../pages/about-us-page.html">About</a></li>
+      <li><a href="../pages/contact-page.html">Contact</a></li>
+    </ul>
+  </nav>
+
+  <input class="search" type="search" placeholder="Search"/>
+
+  <main>
+    <div class="thankYou">
+
+        <div class="check">
+          <svg width="110" height="110" viewBox="0 0 110 110" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+            <circle cx="55" cy="55" r="55" fill="#FCFC62"/>
+            <rect x="25" y="25" width="61" height="61" fill="url(#pattern0)"/>
+            <defs>
+              <pattern id="pattern0" patternContentUnits="objectBoundingBox" width="1" height="1">
+                <use xlink:href="#image0_0_1" transform="scale(0.01)"/>
+              </pattern>
+              <image id="image0_0_1" width="100" height="100" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGQAAABkCAYAAABw4pVUAAAACXBIWXMAAAsTAAALEwEAmpwYAAAEJElEQVR4nO2cW6gVZRiGH9tWmjvKYwSanSjQDCOxwuxCKUKjkzeVEGgEQakoiBBUhuBFSmEYGKQmpAWCYhFkpYQ3akoUhXmhHfCUopmaoml7xU//osUm1/5mOzP/mv29D3x3a828/7xrzX96Z0AIIYQQQgghhBBCCCGEEEIIUTmuBF4C1gMbgDlAe2pRXmkHvgZqnWoXMCi1OI+s+B8z6vV+anHeeAjoaGLIaaBXapFeuBr4pYkZtWhWn9RCvbC0CzNCfZ9apBfGA38bDHkmtVAvQ9xdBjO+VP9RDosMZpwAbihJj2vGAhcMhryQWqgHroiddFdmfKVbVTm8bjAjzDtuLUmPa+4EzhkMmZ1aqAd6AzsMZmwD2lKL9cA8gxlngZGphXrgNuCMwZCXUwv1wGXAFoMZ3wKXpxbrgRkGM84Dd6cW6oHhwEmDIQtSC/VAL2CjwYwftbReDs8ZzAgrveNK0uOa64HfDYYsTi3UC+sNZvwE9Est1ANPG8wIW7ITUwv1wCDgsMGQd1IL9cJHBjN+jcEGUTCPGMwI9XDRQgRcA+wzmBHCcCJx6rBeB4H+ZYjxzoQuUof1eiK1UA/0A/YazPgwtVAvLDWYcRQYklqoB+4zpg7DRFG0SOrwk6KFiH95w2DGH8DQ+HlRIHcBfxkMmV6kCPFflOcbgxmbqpo6DLHKqcCbwCvACFqb1wxmnAJupIKE++sPnRpzIeaXWpFRxtRheIq2knzepFHLWywS03aRJ2Q715YY+6kcwwyN+yIu2rUCcw16z8RAXCW5x9DAWrylhShNFVKHc6kwA4yz3FCHgDEtnjrc3hMC0suNhoT6E3gsgcYXDdpCR38HPYC+wKcZTAkjsFktmDp8lR5Em3HFtLHejRO0ovnMoOW7FhsN5sasDH1KLV6sIoMC040B6VR9Wyk8aRzNNP46hyZMHS7EAfcac0312g+MzlnDOsN5d3sKSN8cE+FWU8La0aSczv2U4Xzh1no/zhgQn9O2mnI+h4fsBxr/nW/heFfug4wjsCWXsJa0xnD8n72/ci/sKczPaMraOMfJwmTDcUPU58GC2lk5phl36eq1FRicc+pwWcFtrBwT4z611ZQ9wO2G475nONYB4NoS2lg5Rhpeh1drqGPAAzmkDh8tsY2VI0zcdmYw5WzcJu7MVfFf1NX3VyVoYyUjnB9nMKUjDg4aedvwvSMZ+iL3tBkvaq2hVsTFQGvqcIr7q9wN5mRcmNwYlz4sw2fRTR6PL/2q5VRHgevkxqW/x/C3nAyZKjPy4SZjCLrWpMIupsiR/sDmbppxIkaURAER1VXdMOR5OVH8wmSH0YzNVQ1IV41nDZncMEK7JbVQT0wAjjcxZGZqgR4ZcZG1q5W6VaWjPUaOVsfkZHgdhhBCCCGEEEIIIYQQQggi/wB3c58C/MhdJQAAAABJRU5ErkJggg=="/>
+            </defs>
+          </svg>
+
+        </div>
+
+      <div class="thankYouText">
+        <h2>Your order has been received!</h2>
+        <p>A receipt has been sent to you via email. Thank you for shopping with rainy days.</p>
+      </div>
+
+      <div class="takeMeBackButton">
+        <button onclick="window.location.href='index.html'" type="button">Take me back</button>
+      </div>
+
+    </div>
+  </main>

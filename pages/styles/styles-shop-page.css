@@ -1,0 +1,316 @@
+:root {
+    --primary: #fcfc62;
+    --secondary: #1d1e18;
+    --tertiary: #f4f5f6;
+}
+
+* {
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+}
+
+body{
+    background: var(--tertiary);
+}
+
+/*this is start of header*/
+
+.header {
+    display: flex;
+    position: sticky;
+    background-color: var(--primary);
+    align-items: center;
+    padding: 1rem;
+    height: 68px;
+    gap: 1rem;
+    top: 0;
+    z-index: 20;
+}
+
+.headerButtons {
+    display: flex;
+    gap: 1rem;
+    font-size: 1.3rem;
+}
+
+.nav {
+    display: none;
+}
+
+.navMenu {
+    display: none;
+    position: absolute;
+    background-color: var(--primary);
+    margin-top: 255px;
+    justify-content: center;
+    left: 0;
+    width: 100vw;
+}
+
+.navMenu .menu {
+    padding-bottom: .5rem;
+    font-size: 31px;
+    font-weight: bold;
+}
+
+.navMenu ul {
+    gap: .5rem;
+    padding: 0;
+}
+
+.navMenu li{
+    list-style-type: none;
+    padding-left: 1rem;
+    border-bottom: solid 1px var(--secondary);
+    font-size: 25px;
+}
+
+.navMenu a {
+    color: var(--secondary);
+    text-decoration: none;
+}
+
+.desktop {
+    display: none;
+}
+
+#menuCheckbox:checked ~ .navMenu{
+    display: block;
+}
+
+#menuCheckbox {
+    display: none;
+}
+
+.logo {
+    flex-grow: 2;
+}
+
+.logo img {
+    height: 60px;
+    width: 108px;
+}
+
+.search {
+    background-color: #EEEEEE;
+    border: none;
+    width: 100vw;
+    padding: 8px;
+}
+
+/*this is main*/
+
+.contentContainer {
+    display: flex;
+    justify-content: center;
+    margin-top: 1rem;
+}
+
+.breadCrumb {
+    display: flex;
+    font-size: .5rem;
+    gap: 1rem;
+    margin: .5rem 1rem;
+}
+
+.BreadCrumbLight {
+    font-weight: normal;
+    color: rgba(29, 30, 24, 0.72);
+}
+.selectors{
+    display: flex;
+    justify-content: space-between;
+    margin: 1rem;
+    flex-grow: 1;
+}
+
+.selectors select {
+    font-size: .5rem;
+    width: 90px;
+    padding: 2px 0 2px 4px;
+    outline: 0;
+    background-color: #f4f5f6;
+}
+
+.shopContainer {
+    display: flex;
+    justify-content: center;
+}
+
+
+.cardContainer {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-top: 1rem;
+    width: 430px;
+}
+
+.contentCard {
+    display: flex;
+    flex-direction: column;
+    flex-shrink: 0;
+    height: 273px;
+    width: 189px;
+    background-color: #EEEEEE;
+}
+
+.contentCardImage {
+    height: 200px;
+    width: 100%;
+    padding: 8px;
+}
+
+.contentCard h3 {
+    font-size: 12px;
+}
+
+.contentCard p {
+    font-size: 8px;
+}
+
+.contentCardText {
+    padding-left: 4px;
+}
+
+.contentCard:focus {
+    transform: scale(1.03);
+}
+
+/*this is the footer*/
+
+.footerContainer {
+    display: flex;
+    background-color: var(--primary);
+    overflow: hidden;
+    justify-content: space-between;
+    padding: 1rem;
+    margin-top: 1rem;
+}
+
+.footerContainer ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footerContainer ul li {
+    font-size: .5rem;
+}
+
+.footerContainer ul li:first-child  {
+    font-weight: bold;
+}
+
+@media (min-width: 700px) {
+
+    .cardContainer {
+        width: 700px;
+    }
+}
+
+@media (min-width: 1024px) {
+    .header {
+        display: flex;
+        position: relative;
+        justify-content: space-between;
+    }
+
+    .logo {
+        flex-grow: 0;
+    }
+
+    .navMenu {
+        width: 350px;
+        height: 100vh;
+        top: 0;
+        margin-top: 68px;
+    }
+
+    .menuButtonContainer {
+        display: flex;
+        align-items: center;
+        gap: 2rem;
+    }
+
+    .desktop {
+        display: block;
+    }
+
+    .navMenu .menu {
+        margin-top: 0;
+    }
+
+    .nav {
+        display: flex;
+        position: relative;
+    }
+
+    .nav ul {
+        display: flex;
+        justify-content: center;
+        gap: 75px;
+        width: 100vw;
+        background-color: #1d1e18;
+        list-style: none;
+        padding: 0;
+    }
+
+    .nav ul li a {
+        color: var(--tertiary);
+        text-decoration: none;
+    }
+
+    main {
+        display: flex;
+        flex-direction: column;
+        width: 100vw;
+        align-items: center;
+        overflow: clip;
+    }
+
+    .breadCrumb{
+        position: absolute;
+        left: 6%;
+        top: 20%
+    }
+
+    .selectors {
+        padding-top: 1rem;
+    }
+
+    .contentCard {
+        height: 448px;
+        width: 310px;
+    }
+
+    .contentCardImage {
+        height: 328px;
+        width: 100%;
+        padding: 8px;
+    }
+
+    .contentCard h3 {
+        font-size: 25px;
+    }
+
+    .contentCard p {
+        font-size: 16px;
+    }
+
+    .cardContainer {
+        width: 1300px;
+    }
+
+    .selectors {
+        display: flex;
+        gap: 2rem;
+        justify-content: space-between;
+        width: 1300px;
+    }
+
+    .price {
+        flex-grow: 2;
+    }
+}

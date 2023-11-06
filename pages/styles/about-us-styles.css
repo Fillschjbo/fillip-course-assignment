@@ -1,0 +1,250 @@
+:root {
+    --primary: #fcfc62;
+    --secondary: #1d1e18;
+    --tertiary: #f8f8f8;
+}
+
+* {
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+}
+
+body{
+    background: var(--tertiary);
+}
+
+/*this is start of header*/
+
+.header {
+    display: flex;
+    position: sticky;
+    background-color: var(--primary);
+    align-items: center;
+    padding: 1rem;
+    height: 68px;
+    gap: 1rem;
+    top: 0;
+    z-index: 20;
+}
+
+.headerButtons {
+    display: flex;
+    gap: 1rem;
+    font-size: 1.3rem;
+}
+
+.nav {
+    display: none;
+}
+
+.navMenu {
+    display: none;
+    position: absolute;
+    background-color: var(--primary);
+    margin-top: 255px;
+    justify-content: center;
+    left: 0;
+    width: 100vw;
+}
+
+.navMenu .menu {
+    padding-bottom: .5rem;
+    font-size: 31px;
+    font-weight: bold;
+}
+
+.navMenu ul {
+    gap: .5rem;
+    padding: 0;
+}
+
+.navMenu li{
+    list-style-type: none;
+    padding-left: 1rem;
+    border-bottom: solid 1px var(--secondary);
+    font-size: 25px;
+}
+
+.navMenu a {
+    color: var(--secondary);
+    text-decoration: none;
+}
+
+.desktop {
+    display: none;
+}
+
+#menuCheckbox:checked ~ .navMenu{
+    display: block;
+}
+
+#menuCheckbox {
+    display: none;
+}
+
+.logo {
+    flex-grow: 2;
+}
+
+.logo img {
+    height: 60px;
+    width: 108px;
+}
+
+.search {
+    background-color: #EEEEEE;
+    border: none;
+    width: 100vw;
+    padding: 8px;
+}
+
+/*this is main*/
+
+.aboutMe {
+    display: flex;
+
+}
+
+.aboutMe img{
+    display: none;
+}
+
+.text {
+    position: absolute;
+    top: 170px;
+    left: 20px;
+    width: 209px;
+    height: 195px;
+}
+
+.heading {
+    font-size: 12px;
+}
+
+.paragraph {
+    font-size: 9px;
+}
+
+.whyUs {
+    display: flex;
+    justify-content: flex-end;
+}
+.text2 {
+    position: absolute;
+    width: 220px;
+    height: 195px;
+    top: 725px;
+}
+
+.whyUs img {
+    display: none;
+}
+
+
+/*this is the footer*/
+
+.footerContainer {
+    display: flex;
+    background-color: var(--primary);
+    overflow: hidden;
+    justify-content: space-between;
+    padding: 1rem;
+    margin-top: 1rem;
+}
+
+.footerContainer ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footerContainer ul li {
+    font-size: .5rem;
+}
+
+.footerContainer ul li:first-child  {
+    font-weight: bold;
+}
+
+@media (min-width: 1024px) {
+    .header {
+        display: flex;
+        position: relative;
+        justify-content: space-between;
+    }
+
+    .logo {
+        flex-grow: 0;
+    }
+
+    .navMenu {
+        width: 350px;
+        height: 100vh;
+        top: 0;
+        margin-top: 68px;
+    }
+
+    .menuButtonContainer {
+        display: flex;
+        align-items: center;
+        gap: 2rem;
+    }
+
+    .desktop {
+        display: block;
+    }
+
+    .navMenu .menu {
+        margin-top: 0;
+    }
+
+    .nav {
+        display: flex;
+        position: relative;
+    }
+
+    .nav ul {
+        display: flex;
+        justify-content: center;
+        gap: 75px;
+        width: 100vw;
+        background-color: #1d1e18;
+        list-style: none;
+        padding: 0;
+    }
+
+    .nav ul li a {
+        color: var(--tertiary);
+        text-decoration: none;
+    }
+
+    main {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100vw;
+        height: 100vh;
+    }
+
+
+    .aboutMe {
+        position: absolute;
+        left: 0;
+        height: 400px;
+    }
+
+    .text {
+        top: 15%;
+    }
+
+    .whyUs {
+        position: absolute;
+        top: 55%;
+        right: 0;
+    }
+
+    .text2 {
+        top: 30%;
+    }
+
+}
